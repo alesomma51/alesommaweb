@@ -2,15 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif; }
+  font-family: "Raleway", sans-serif;
+}
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+}
 
-body {
-   }
-
-.menu{
+/*menu */
+.menu {
   background: #293241;
   height: 80px;
   color: #fffffe;
@@ -18,7 +18,7 @@ body {
   width: 100%;
   z-index: 1;
 }
-.menuContainer{
+.menuContainer {
   display: flex;
   height: 100%;
   width: 90%;
@@ -26,45 +26,43 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.menuLogo{
+.menuLogo {
   font-size: 1.5em;
   font-weight: 900;
 }
-.menuLabel, .menuInput{
+.menuLabel,
+.menuInput {
   display: none;
 }
-.menuBotones{
+.menuBotones {
   display: grid;
   grid-auto-flow: column;
   gap: 3em;
 }
-.menuItems{
+.menuItems {
   text-decoration: none;
   color: #fffffe;
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
-.menuItems::after{
-  content:"";
+.menuItems::after {
+  content: "";
   display: block;
   background-color: #fffffe;
   width: 90%;
   margin-top: 3px;
   height: 3px;
-  transition: clip-path .5s;
+  transition: clip-path 0.5s;
   clip-path: var(--clippy);
 }
-.menuItems:hover{
-  --clippy:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+.menuItems:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-
-
+/*inicio */
 .inicio {
   background: #004643;
   display: grid;
-  grid-area: "titulo titulo titulo" 
-              "subt subt subt"
-              "imagen imagen imagen";
+  grid-area: "titulo titulo titulo" "subt subt subt" "imagen imagen imagen";
   justify-content: center;
   width: 100%;
   height: 100vh;
@@ -74,157 +72,155 @@ body {
   padding: 10rem;
 }
 .inicioTitulo {
-    grid: titulo;
-    color: #fffffe; 
+  grid: titulo;
+  color: #fffffe;
 }
 .inicioSubtitulo {
-    grid: subt;
-    color: #abd1c6;
+  grid: subt;
+  color: #abd1c6;
 }
-.inicioImagen{
+.inicioImagen {
   grid: imagen;
-
 }
 
+/*mis trabajos */
 .misTrabajos {
   display: grid;
-  grid-area: "titulo titulo titulo" 
-              "texto texto texto" 
-              "img img img";
+  grid-area: "titulo titulo titulo" "texto texto texto" "img img img";
   background: #004643;
   width: 100%;
   height: 100vh;
   align-content: space-around;
-  text-align: justify; 
+  text-align: justify;
   font-size: 2rem;
 }
 .misTrabajosTitulo {
-    grid: titulo;
-    color: #fffffe;
-    text-align: center; 
+  grid: titulo;
+  color: #fffffe;
+  text-align: center;
 }
 .misTrabajosTexto {
-    grid: texto;
-    color: #f9bc60;
-    padding: 3rem; 
+  grid: texto;
+  color: #f9bc60;
+  padding: 3rem;
 }
 .misTrabajosEjemplos {
-    grid: img;
-    color: #f9bc60;
-    margin-left: 4.6rem;
+  grid: img;
+  color: #f9bc60;
+  margin-left: 4.6rem;
 }
-.misTrabajosEjemplos ul li{
-    display: inline-block;
-    list-style: none;
+.misTrabajosEjemplos ul li {
+  display: inline-block;
+  list-style: none;
 }
-.misTrabajosEjemplos img{
+.misTrabajosEjemplos img {
   width: 80%;
   text-align: center;
 }
 
+/* acerca de mi */
 .aboutMe {
   display: grid;
-  grid-area: "titulo titulo titulo titulo" 
-              "texto texto texto texto" 
-              "lista lista imagen imagen";
+  grid-area: "titulo titulo titulo titulo" "texto texto texto texto"
+    "lista lista imagen imagen";
   justify-content: center;
   background: #abd1c6;
   width: 100%;
   height: 100vh;
-  text-align: justify; 
+  text-align: justify;
   font-size: 2rem;
   padding: 5rem;
 }
 .aboutMeTitulo {
-    grid: titulo;
-    color: whitesmoke;
-    text-align: center;
+  grid: titulo;
+  color: whitesmoke;
+  text-align: center;
 }
 .aboutMeTexto {
-    grid: texto;
-    color: #fffffe; 
+  grid: texto;
+  color: #fffffe;
 }
-.aboutMeList{
+.aboutMeList {
   grid-area: lista;
 }
-.aboutMeList ul{
+.aboutMeList ul {
   color: #fffffe;
   margin-top: 3rem;
   display: grid;
 }
-.aboutMeList li{
+.aboutMeList li {
   list-style: none;
-  margin: .5rem;
+  margin: 0.5rem;
   color: #fffffe;
   display: inline-block;
 }
 .aboutMeImagen {
-    grid: imagen;  
+  grid: imagen;
 }
-.aboutMeImagen img{
-    width: 85%;
+.aboutMeImagen img {
+  width: 85%;
 }
 
-.contactoContainer{  
+/* contactp */
+.contactoContainer {
   display: grid;
   grid-template-columns: 1.1fr 1fr 1fr 1fr;
   grid-template-rows: 0.3fr 1.3fr 1.4fr;
   gap: 5px 0px;
   grid-auto-flow: row;
-  background:#abd1c6;
+  background: #abd1c6;
   width: 100%;
   height: 100vh;
-  text-align: justify; 
+  text-align: justify;
   font-size: 2rem;
   padding: 5rem;
 }
-.h3 { 
-  grid-area: 1 / 1 / 2 / 5; 
+.contactoTitulo {
+  grid-area: 1 / 1 / 2 / 5;
   text-align: center;
-  color:#fffffe;
+  color: #fffffe;
 }
-.contactoTexto { 
-  grid-area: 2 / 1 / 4 / 3; 
+.contactoTexto {
+  grid-area: 2 / 1 / 4 / 3;
   color: #fffffe;
   justify-content: center;
   align-items: center;
   padding: 1rem;
 }
-.img img{
+.img img {
   width: 76%;
 }
-.contactoRedes { 
-  grid-area: 2 / 3 / 4 / 5; 
+.contactoRedes {
+  grid-area: 2 / 3 / 4 / 5;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: space-evenly;
 }
 
-
-
+/* footer */
 .final {
   background: #004643;
   width: 100%;
   height: 10vh;
-  text-align: center; 
+  text-align: center;
   color: #f9bc60;
   padding: 1rem;
 }
-.final li{
+.final li {
   list-style: none;
 }
 
+/* media queries */
 
-
-  @media (max-width:721px){
-  .menuLabel{
+@media (max-width: 769px) {
+  .menuLabel {
     display: block;
     cursor: pointer;
   }
-  .menuBotones{
+  .menuBotones {
     position: fixed;
-    top:80px;
+    top: 80px;
     bottom: 0;
     background: #f9bc60;
     width: 100%;
@@ -236,8 +232,117 @@ body {
     clip-path: circle(0 at center);
     transition: clip-path 1s ease-in-out;
   }
-  .menuInput:checked + .menuBotones{
+  .menuInput:checked + .menuBotones {
     clip-path: circle(100% at center);
+  }
+
+  /*inicio */
+  .inicio {
+    font-size: 1.5rem;
+  }
+  .inicioImagen {
+    padding-right: 7rem;
+  }
+
+  /* acerca de mi */
+  .aboutMe {
+    font-size: 1.5rem;
+    padding: 4rem;
+  }
+
+  .aboutMeImagen {
+    width: 130%;
+  }
+
+  /*mis trabajos */
+  .misTrabajos {
+    font-size: 1.7rem;
+    padding: 3rem;
+  }
+
+  .misTrabajosEjemplos ul li {
+    display: block;
+    list-style: none;
+    justify-items: center;
+  }
+  .misTrabajosEjemplos img {
+    width: 40%;
+    margin-left: 8.5rem;
+    border: 1px solid #f9bc60;
   }
 }
 
+@media (max-width: 420px) {
+  /*inicio */
+  .inicio {
+    font-size: 2rem;
+  }
+  .inicioImagen {
+    display: none;
+  }
+
+  /* acerca de mi */
+  .aboutMe {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 1rem;
+  }
+
+  .aboutMeList {
+    display: none;
+  }
+  .aboutMeImagen {
+    width: 103%;
+    margin-left: 0.7rem;
+  }
+  /*mis trabajos */
+  .misTrabajos {
+    font-size: 1rem;
+    padding-top: 8rem;
+    padding: 0;
+  }
+  .misTrabajosTitulo {
+    padding-top: 4rem;
+  }
+  .misTrabajosTexto {
+    padding: 1rem;
+  }
+  .misTrabajosEjemplos img {
+    width: 70%;
+    margin-left: 0.2rem;
+    border: 1px solid #f9bc60;
+  }
+
+  /* contactp */
+  .contactoContainer {
+    font-size: 1rem;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 0;
+  }
+  .contactoTitulo {
+    padding-top: 4rem;
+  }
+  .contactoTexto {
+    padding: 1rem;
+  }
+  .img img {
+    display: none;
+  }
+  .contactoRedes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    margin-left: 1.1rem;
+  }
+  .contactoRedes img {
+    width: 60%;
+    margin-left: 2.5rem;
+  }
+}
