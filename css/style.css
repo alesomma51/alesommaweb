@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+   }
+
+.menu{
+  background: #293241;
+  height: 80px;
+  color: #fffffe;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.menuContainer{
+  display: flex;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuLogo{
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.menuLabel, .menuInput{
+  display: none;
+}
+.menuBotones{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3em;
+}
+.menuItems{
+  text-decoration: none;
+  color: #fffffe;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.menuItems::after{
+  content:"";
+  display: block;
+  background-color: #fffffe;
+  width: 90%;
+  margin-top: 3px;
+  height: 3px;
+  transition: clip-path .5s;
+  clip-path: var(--clippy);
+}
+.menuItems:hover{
+  --clippy:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
+.inicio {
+  background: #004643;
+  display: grid;
+  grid-area: "titulo titulo titulo" 
+              "subt subt subt"
+              "imagen imagen imagen";
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  font-size: 3rem;
+  gap: 1em;
+  padding: 10rem;
+}
+.inicioTitulo {
+    grid: titulo;
+    color: #fffffe; 
+}
+.inicioSubtitulo {
+    grid: subt;
+    color: #abd1c6;
+}
+.inicioImagen{
+  grid: imagen;
+
+}
+
+.misTrabajos {
+  display: grid;
+  grid-area: "titulo titulo titulo" 
+              "texto texto texto" 
+              "img img img";
+  background: #004643;
+  width: 100%;
+  height: 100vh;
+  align-content: space-around;
+  text-align: justify; 
+  font-size: 2rem;
+}
+.misTrabajosTitulo {
+    grid: titulo;
+    color: #fffffe;
+    text-align: center; 
+}
+.misTrabajosTexto {
+    grid: texto;
+    color: #f9bc60;
+    padding: 3rem; 
+}
+.misTrabajosEjemplos {
+    grid: img;
+    color: #f9bc60;
+    margin-left: 4.6rem;
+}
+.misTrabajosEjemplos ul li{
+    display: inline-block;
+    list-style: none;
+}
+.misTrabajosEjemplos img{
+  width: 80%;
+  text-align: center;
+}
+
+.aboutMe {
+  display: grid;
+  grid-area: "titulo titulo titulo titulo" 
+              "texto texto texto texto" 
+              "lista lista imagen imagen";
+  justify-content: center;
+  background: #abd1c6;
+  width: 100%;
+  height: 100vh;
+  text-align: justify; 
+  font-size: 2rem;
+  padding: 5rem;
+}
+.aboutMeTitulo {
+    grid: titulo;
+    color: whitesmoke;
+    text-align: center;
+}
+.aboutMeTexto {
+    grid: texto;
+    color: #fffffe; 
+}
+.aboutMeList{
+  grid-area: lista;
+}
+.aboutMeList ul{
+  color: #fffffe;
+  margin-top: 3rem;
+  display: grid;
+}
+.aboutMeList li{
+  list-style: none;
+  margin: .5rem;
+  color: #fffffe;
+  display: inline-block;
+}
+.aboutMeImagen {
+    grid: imagen;  
+}
+.aboutMeImagen img{
+    width: 85%;
+}
+
+.contactoContainer{  
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1.3fr 1.4fr;
+  gap: 5px 0px;
+  grid-auto-flow: row;
+  background:#abd1c6;
+  width: 100%;
+  height: 100vh;
+  text-align: justify; 
+  font-size: 2rem;
+  padding: 5rem;
+}
+.h3 { 
+  grid-area: 1 / 1 / 2 / 5; 
+  text-align: center;
+  color:#fffffe;
+}
+.contactoTexto { 
+  grid-area: 2 / 1 / 4 / 3; 
+  color: #fffffe;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.img img{
+  width: 76%;
+}
+.contactoRedes { 
+  grid-area: 2 / 3 / 4 / 5; 
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-evenly;
+}
+
+
+
+.final {
+  background: #004643;
+  width: 100%;
+  height: 10vh;
+  text-align: center; 
+  color: #f9bc60;
+  padding: 1rem;
+}
+.final li{
+  list-style: none;
+}
+
+
+
+  @media (max-width:721px){
+  .menuLabel{
+    display: block;
+    cursor: pointer;
+  }
+  .menuBotones{
+    position: fixed;
+    top:80px;
+    bottom: 0;
+    background: #f9bc60;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+  }
+  .menuInput:checked + .menuBotones{
+    clip-path: circle(100% at center);
+  }
+}
+
